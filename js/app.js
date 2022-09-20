@@ -8,7 +8,7 @@ function randomcustomer(min, max) {
 
 let Seattle = {
   name: 'Seattle',
-  customers: [],
+  customers: 0,
   cookiesperhour: [],
   averagecookie: 6.3,
   sumofcookie: 0,
@@ -17,29 +17,24 @@ let Seattle = {
   getcustomer: function () {
     for (let i = 0; i < hours.length; i++) {
       let hourcustomer = randomcustomer(this.mincust, this.maxcust);
-      this.customers.push(hourcustomer);
+      this.customers = hourcustomer;
     }
   },
   getcookie: function () {
     this.getcustomer();
     for (let i = 0; i < hours.length; i++) {
-      let hourcookie = this.averagecookie * this.customers[i];
+      let hourcookie = this.averagecookie * this.customers;
       let roundedhourcookie = Math.ceil(hourcookie);
+      this.sumofcookie += roundedhourcookie;
       this.cookiesperhour.push(roundedhourcookie);
+      return this.cookiesperhour;
     }
   },
-  addall: function () {
-    let sum = 0;
-    for (let i = 0; i < this.cookiesperhour.length; i++)
-      sum += this.cookiesperhour[i];
-    this.sumofcookie.push(sum);
-  }
 };
-
 
 let Tokyo = {
   name: 'Toyko',
-  customers: [],
+  customers: 0,
   cookiesperhour: [],
   sumofcookie: 0,
   averagecookie: 1.2,
@@ -48,29 +43,25 @@ let Tokyo = {
   getcustomer: function () {
     for (let i = 0; i < hours.length; i++) {
       let hourcustomer = randomcustomer(this.mincust, this.maxcust);
-      this.customers.push(hourcustomer);
+      this.customers = hourcustomer;
     }
   },
   getcookie: function () {
     this.getcustomer();
     for (let i = 0; i < hours.length; i++) {
-      let hourcookie = this.averagecookie * this.customers[i];
+      let hourcookie = this.averagecookie * this.customers;
       let roundedhourcookie = Math.ceil(hourcookie);
+      this.sumofcookie += roundedhourcookie;
       this.cookiesperhour.push(roundedhourcookie);
+      return this.cookiesperhour;
     }
   },
-  addall: function () {
-    let sum = 0;
-    for (let i = 0; i < this.cookiesperhour.length; i++)
-      sum += this.cookiesperhour[i];
-    this.sumofcookie.push(sum);
-  }
 };
 
 
 let Dubai = {
   name: 'Dubai',
-  customers: [],
+  customers: 0,
   cookiesperhour: [],
   sumofcookie: 0,
   averagecookie: 3.7,
@@ -79,29 +70,25 @@ let Dubai = {
   getcustomer: function () {
     for (let i = 0; i < hours.length; i++) {
       let hourcustomer = randomcustomer(this.mincust, this.maxcust);
-      this.customers.push(hourcustomer);
+      this.customers = hourcustomer;
     }
   },
   getcookie: function () {
     this.getcustomer();
     for (let i = 0; i < hours.length; i++) {
-      let hourcookie = this.averagecookie * this.customers[i];
+      let hourcookie = this.averagecookie * this.customers;
       let roundedhourcookie = Math.ceil(hourcookie);
+      this.sumofcookie += roundedhourcookie;
       this.cookiesperhour.push(roundedhourcookie);
+      return this.cookiesperhour;
     }
   },
-  addall: function () {
-    let sum = 0;
-    for (let i = 0; i < this.cookiesperhour.length; i++)
-      sum += this.cookiesperhour[i];
-    this.sumofcookie.push(sum);
-  }
 };
 
 
 let Paris = {
   name: 'Paris',
-  customers: [],
+  customers: 0,
   cookiesperhour: [],
   sumofcookie: 0,
   averagecookie: 2.3,
@@ -110,29 +97,25 @@ let Paris = {
   getcustomer: function () {
     for (let i = 0; i < hours.length; i++) {
       let hourcustomer = randomcustomer(this.mincust, this.maxcust);
-      this.customers.push(hourcustomer);
+      this.customers = hourcustomer;
     }
   },
   getcookie: function () {
     this.getcustomer();
     for (let i = 0; i < hours.length; i++) {
-      let hourcookie = this.averagecookie * this.customers[i];
+      let hourcookie = this.averagecookie * this.customers;
       let roundedhourcookie = Math.ceil(hourcookie);
+      this.sumofcookie += roundedhourcookie;
       this.cookiesperhour.push(roundedhourcookie);
+      return this.cookiesperhour;
     }
   },
-  addall: function () {
-    let sum = 0;
-    for (let i = 0; i < this.cookiesperhour.length; i++)
-      sum += this.cookiesperhour[i];
-    this.sumofcookie.push(sum);
-  }
 };
 
 
 let Lima = {
   name: 'Lima',
-  customers: [],
+  customers: 0,
   cookiesperhour: [],
   sumofcookie: 0,
   averagecookie: 4.6,
@@ -141,46 +124,53 @@ let Lima = {
   getcustomer: function () {
     for (let i = 0; i < hours.length; i++) {
       let hourcustomer = randomcustomer(this.mincust, this.maxcust);
-      this.customers.push(hourcustomer);
+      this.customers = hourcustomer;
     }
   },
   getcookie: function () {
     this.getcustomer();
     for (let i = 0; i < hours.length; i++) {
-      let hourcookie = this.averagecookie * this.customers[i];
+      let hourcookie = this.averagecookie * this.customers;
       let roundedhourcookie = Math.ceil(hourcookie);
+      this.sumofcookie += roundedhourcookie;
       this.cookiesperhour.push(roundedhourcookie);
+      return this.cookiesperhour;
     }
   },
-  addall: function () {
-    let sum = 0;
-    for (let i = 0; i < this.cookiesperhour.length; i++)
-      sum += this.cookiesperhour[i];
-    this.sumofcookie.push(sum);
+};
+
+let storearray = [Seattle, Tokyo, Dubai, Paris, Lima];
+
+const displaydata = function () {
+  let section = document.getElementById('display');
+  for (let i = 0; i < storearray.length; i++) {
+    let title = document.createElement('h2');
+    title.innerHTML = storearray[i].name;
+    section.appendChild(title);
+    let list = document.createElement('ul');
+    section.appendChild(list);
+    let city = storearray[i];
+    for (let i = 0; i < hours.length; i++) {
+      city.getcookie();
+      let listelement = document.createElement('li');
+      listelement.innerHTML = `${hours[i]}: ${city.cookiesperhour[i]} cookies`;
+      list.appendChild(listelement);
+    }
   }
 };
 
+displaydata();
 
-const parentElement = document.getElementById('citiescookienumbers');
-const article = document.createElement('article');
-parentElement.appendChild(article);
 
-const h2 = document.createElement('h2');
-h2.textContent = ;
-article.appendChild(h2);
 
-const p = document.createElement('p');
-p.textContent = 'Frankie is adorable, and is ' + frankie.age + ' old.';
-article.appendChild(p);
 
-const ul = document.createElement('ul');
-article.appendChild(ul);
 
-for (let i = 0; i < frankie.interests.length; i++) {
-  const li = document.createElement('li');
-  li.textContent = frankie.interests[i];
-  ul.appendChild(li);
-}
+
+
+
+
+
+
 
 
 
