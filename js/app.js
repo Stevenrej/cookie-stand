@@ -28,7 +28,6 @@ City_build.prototype.getcookie = function () {
 };
 
 City_build.prototype.displaydata = function () {
-  this.getcookie();
 
   let tables = document.getElementById('table');
   let tablebody = document.createElement('tbody');
@@ -139,6 +138,9 @@ function totaltotals() {
   tableelement.innerText = grandtotal;
   tablefoot.appendChild(tableelement);
 }
+
+
+
 
 headercreate();
 render_all();
