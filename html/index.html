@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/style.css">
 
-  <!-- links to fonts -->
+
+<head>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
 
   <meta charset="UTF-8">
@@ -14,9 +16,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salmon Cookies</title>
 </head>
+
+
 <body>
-  <header> 
-    <h1>Salmon Cookies</h1>
-  </header>
+  <header>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Cookie Menu</a>
+      <a href="#">Locations</a>
+      <a href="#">Merch</a>
+      <a href="#">Contact</a>
+      <a href="../html/sales.html">Sales Info</a>
+      <h3>Local Hours: 6am-8pm</h3>
+      <h3>9668 Rainier Ave S
+        Seattle, Washington(WA), 98118</h3>
+      <h3>448-123, Ikanikeisaiganaibaai
+        Tokyo, Japan
+      </h3>
+      <h3>Po Box 13283,
+        Dubai, Emirates 13283
+      </h3>
+      <h3>38 R.De L'universite
+        Paris, Île-de-France 50649
+      </h3>
+      <h3>Av. Benavides 245, Of. 403
+        Lima, Peru
+      </h3>
+    </div>
+
+    <div class="top">
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+
+    
+      <div></div>
+      
+      <img id=fishboy src="../img/salmon.png" />
+      <h1>Pat's Salmon Cookies</h1>
+      
+      <h2>America's #1 Cookie for Fish and Friends</h2>
+      
+
+    </div>
+  </div>
+  
+  <div class="hero-image">
+    <img id=banner src="../img/banner.jpeg">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Start Your Order</h1>
+      <button class="order">Delivery</button>
+      <button class="order">Pick Up</button>
+    </div>
+</header>
+<main>
+
+    <div class='flex-container'>
+      <div><img class="bodyimg" src="../img/chinook.jpg" />
+      <p>This is a Salmon and it is our mascot and our northstar. Here at Pat's Salmon Cookies we pride ourselves in being America's #1 cookie brand made for fish as well as humans. 'Fresh as fish and tasty as a pastry' is our moto and we make sure as a buisness we follow this and take it to heart.</p></div>
+      <div><img class="bodyimg" src="../img/cutter.jpeg" />
+      <p>Though we make our lovely cookies in the shape of salmon they are edible for both fish and our friends. We do not condone canablism and thus made our cookies avaible for all species</p></div>
+      <div><img class="bodyimg" src="../img/family.jpg" />
+      <p>Nothing means more to us at Pat's Salmon Cookies than family. Well Salmon means a lot...I guess cookies too. Regardless we want all of our customers to feel like family here as well. </p></div>
+      <div><img class="bodyimg" src="../img/fish.jpg" /><p>Fish. We love 'em! But here at Pat's Salmon Cookies we make vegan cookies that do not hurt any animals! Especially our favorite friends, Fish!</p></div>
+      <div><img class="bodyimg" src="../img/frosted-cookie.jpg" /><p>Here is an example of one of our glorious cookies you can buy in one of our amazing store. But wait! Now you can order online and have your cookies delivered! </p></div>
+      <div><img class="bodyimg" src="../img/shirt.jpg" /><p>Shirts! We love 'em! What a better way to show all the people you love and know that salmon cookies are your fav! Order now in our online store! </p></div>
+    </div> 
+  </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li>Contact Us!</li>
+      <li>Phone Number: 1(206)-955-4893</li>
+     <li>Email Address: Pat@salmoncookies.com</li> 
+      <li>Vist our North American Location at:</li>
+      <li>Rainier Ave S
+        Seattle, Washington(WA), 98118</li>
+      </ul>
+    </p>
+  </footer>
 </body>
+
+
+
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
 </html>

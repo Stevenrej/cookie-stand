@@ -1,0 +1,28 @@
+#table {
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 20px;
+  border-color: antiquewhite;
+  color: #ddd;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  font-size: large;
+  font-family: 'Montserrat', sans-serif;
+}
+
+td {
+  border-style: solid;
+  border-color: antiquewhite;
+}
+
+
+body {
+  background-color: #426A5A;
+}
+
+button {
+  padding: 20px;
+  margin-left: 500px;
+  margin-top: 100px;
+}
