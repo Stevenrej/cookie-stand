@@ -8,10 +8,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales Numbers</title>
 </head>
+
+
+
 <body>
-  <section id="display"></section>
+  <header>
+    <section id="display">
+      <h1>Cookies Sales Numbers</h1>
+      <a href="../html/index.html">Return Home</a>
+
+    </section>
+  </header>
   <table id="table"></table>
-  <script src="../js/app.js"></script>
-  <button><a href="../html/index.html">Return Home</a></button>
+
+    <form id="myform">
+      <fieldset>
+        <legend>New City Form</legend>
+        
+        <label for="cityname">City Name:</label>
+        <input type="text" name="cityname" id="cityname">
+        
+        <label for="averagecookie">Average Cookie Sales:</label>
+        <input type="number" step="0.1" name="averagecookie" id="averagecookie">
+
+        <label for="mincust">Minimum Customers:</label>
+        <input type="number" name="mincust" id="mincust">
+        
+        <label for="maxcust">Maximum Customers:</label>
+        <input type="number" name="maxcust" id="maxcust">
+        
+        
+      </fieldset>
+      
+      <button type='submit'>Submit Form</button>
+    </form>
+  
+    <script src="../js/app.js"></script>
 </body>
 </html>

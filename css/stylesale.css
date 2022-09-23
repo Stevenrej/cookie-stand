@@ -16,6 +16,14 @@ td {
   border-color: antiquewhite;
 }
 
+header a {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  margin-left: 60px;
+}
 
 body {
   background-color: #426A5A;
@@ -23,6 +31,34 @@ body {
 
 button {
   padding: 20px;
-  margin-left: 500px;
-  margin-top: 100px;
+  margin-left: 300px;
+  margin-top: 20px;
+  
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+fieldset legend {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 50px;
+}
+
+fieldset label {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border: 3px;
+  border-style: solid;
+  margin-left: 30px;
 }
