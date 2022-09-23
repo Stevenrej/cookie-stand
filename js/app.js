@@ -6,6 +6,8 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 let globalstore = [];
 
+let myForm = document.getElementById('myform');
+
 
 
 // protype methods
@@ -44,7 +46,7 @@ City_build.prototype.displaydata = function () {
   for (let i = 0; i < hours.length; i++) {
 
     let listelement = document.createElement('td');
-    listelement.innerHTML = `${this.cookiesperhour[i]} cookies`;
+    listelement.innerHTML = `${this.cookiesperhour[i]}`;
     tablecookie.appendChild(listelement);
   }
   let totals = document.createElement('td');
@@ -116,7 +118,7 @@ function headercreate() {
 
 function totaltotals() {
   let tables = document.getElementById('table');
-  let tablefoot = document.createElement('tr');
+  let tablefoot = document.createElement('TFoot');
   let tabletotal = document.createElement('th');
   tabletotal.innerText = 'Total per Hour';
   tablefoot.appendChild(tabletotal);
@@ -146,15 +148,36 @@ headercreate();
 render_all();
 totaltotals();
 
+function deleteTFoot() {
+
+  document.getElementById('table').deleteTFoot();
+}
 
 console.log(globalstore);
 
+function handlesubmit(event) {
+  event.preventDefault();
+
+  let name = event.target.cityname.value;
+  let averagecookie = event.target.averagecookie.value;
+  let mincust = event.target.mincust.value;
+  let maxcust = event.target.maxcust.value;
+
+  let newcity = new City_build(name, averagecookie, mincust, maxcust);
+
+  newcity.getcustomer();
+  newcity.getcookie();
+  newcity.displaydata();
+
+  deleteTFoot();
+  totaltotals();
+  myForm.reset();
+}
 
 
 
 
 
 
-
-
+myForm.addEventListener('submit', handlesubmit);
 
