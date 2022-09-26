@@ -4,37 +4,12 @@
 
 
 
-/* Table */
-
-#table {
-  width: 100%;
-  margin-top: 100px;
-  margin-left: 20px;
-  border-color: antiquewhite;
-  color: #ddd;
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 5px;
-
-}
-
-tr {
-  border-style: dashed;
-  border-color: antiquewhite;
-}
 
 
 
 
 /* hero image */
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
 .order {
   font-family: 'Montserrat', sans-serif;
@@ -53,7 +28,7 @@ tr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(234, 219, 219);
 }
 
 .hero-text button {
@@ -76,7 +51,7 @@ tr {
 
 body {
 background-color: #426A5A;
-font-family: 'Montserrat', sans-serif;
+font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 #fishboy {
@@ -220,8 +195,9 @@ justify-content: right;
 }
 
 .flex-container > div > p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 80px;
+  color: red;
 }
 
 
